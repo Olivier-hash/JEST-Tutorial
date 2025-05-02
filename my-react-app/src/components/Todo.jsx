@@ -1,8 +1,9 @@
+import React from "react"
 
-
-function Todo({}) {
+function Todo({todo}) {
+  const {id, title, comleted} = todo;
   return (
-    <div>Todo</div>
+    <div data-testid="todo-1">{ title} </div>
   )
 }
 

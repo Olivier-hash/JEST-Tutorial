@@ -1,6 +1,9 @@
 import { render, screen, cleanup } from '@testing-library/react';
 import Todo from '../todo';
 
-test('test', () => {
-    expect(true).toBe(true);
+test('should render to do component', () => {
+    render(<Todo/>)
+    const todoElement = screen.getByTestId('todo-1');
+    expect(todoElement).toBeInTheDocument();
+    expect(todoElement).toHaveTextContent('Hello world')
 })
